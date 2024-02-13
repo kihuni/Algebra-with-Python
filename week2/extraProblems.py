@@ -50,6 +50,7 @@ for solution in solutions:
     print("The solution is: ", solution)
 """
 
+"""
 from sympy import *
 
 var('x y')
@@ -65,3 +66,31 @@ sol = solve(eq1, x)
 # show solution
 
 print("x = ", sol[0])
+"""
+
+import sympy 
+from sympy import symbols
+
+
+var('x y')
+
+# Equation set equal to zero, ready to factor
+eq = 2*x + 10*y + 4
+
+sympy.factor(eq)
+
+
+# Explaining how each functions works
+
+# converting string input(including fractions) to float
+
+def string_frac(in_string):
+    if '/' in in_string:
+        nd = in_string.split('/')
+        n = float(nd[0])
+        d = float(nd[1])
+        ans = n/d
+        return ans
+    else:
+        return float(in_string)
+    
