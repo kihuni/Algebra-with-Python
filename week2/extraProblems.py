@@ -37,6 +37,7 @@ print("The solution is: ", solve(eq, x))
 # Problem 3
 # Multiple solutions
 
+"""
 import sympy
 from sympy import symbols
 from sympy.solvers import solve
@@ -47,4 +48,20 @@ eq = input("Enter the equation: ")
 solutions = solve(eq, x)
 for solution in solutions:
     print("The solution is: ", solution)
-    
+"""
+
+from sympy import *
+
+var('x y')
+
+first = 2*x + 10
+
+# Sympy syntax for equation equal to zero, ready to factor
+eq1 = Eq(first, y)
+
+# sympy solve for x
+sol = solve(eq1, x)
+
+# show solution
+
+print("x = ", sol[0])
