@@ -68,7 +68,7 @@ sol = solve(eq1, x)
 print("x = ", sol[0])
 """
 
-import sympy 
+"""import sympy 
 from sympy import symbols
 
 
@@ -78,7 +78,7 @@ var('x y')
 eq = 2*x + 10*y + 4
 
 sympy.factor(eq)
-
+"""
 
 # Explaining how each functions works
 
@@ -94,3 +94,17 @@ def string_frac(in_string):
     else:
         return float(in_string)
     
+def one_step_mult():
+    import random
+    a = random.randint(1, 11)
+    b = random.randint(2, 24)
+    print(a, "x = ",b)
+    ans_in = (input("What is x? "))
+    answer = b/a
+    
+    # test
+    if string_frac(ans_in) == answer:
+        print("Correct!")
+    else:
+        print("Incorrect. The answer is: ", answer)
+        
